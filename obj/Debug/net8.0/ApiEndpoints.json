@@ -1,0 +1,1768 @@
+[
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Kompanija.GetBrojZaposlenihRange.GetBrojZaposlenihEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "broj-zaposlenih",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "noRequest",
+        "Type": "JobSearchingWebApp.ViewModels.NoRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Kompanija.GetBrojZaposlenihRange.GetBrojZaposlenihResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kompanija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "confirm-email",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "JobSearchingWebApp.ViewModels.ConfirmEmail",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.CV.Delete.CVDeleteEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "cv-delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.ViewModels.NoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "CV"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.CV.Dodaj.CVDodajEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "cv-dodaj",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.CV.Dodaj.CVDodajRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.CV.Dodaj.CVDodajResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "CV"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.CV.GetAll.CVGetAllEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "cv-get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "KandidatId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Objavljen",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Naziv",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.CV.GetAll.CVGetAllResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "CV"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.CV.Update.CVUpdateEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "cv-update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.CV.Update.CVUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.CV.Update.CVUpdateResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "CV"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.CV.UpdateStatus.CVUpdateStatusEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "cv-update-status",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.CV.UpdateStatus.CVUpdateStatusRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.CV.UpdateStatus.CVUpdateStatusResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "CV"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.CV.GetById.CVGetByIdEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "cv/get-by-id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.CV.GetById.CVGetByIdResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "CV"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.GeneratorPodataka.GenerisiPodatkeEndpoint",
+    "Method": "Generisi",
+    "RelativePath": "GenerisiPodatkeEndpoint/Generisi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Iskustvo.GetAll.IskustvoGetAllEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "iskustvo-get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Iskustvo.GetAll.IskustvoGetAllRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Iskustvo.GetAll.IskustvoGetAllResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Iskustvo"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Kandidat.Delete.KandidatDeleteEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kandidat-delete",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.ViewModels.NoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kandidat"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Kandidat.Dodaj.KandidatDodajEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kandidat-dodaj",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Kandidat.Dodaj.KandidatDodajRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Kandidat"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Kandidat.GetAll.KandidatGetAllEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kandidat-get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Ime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Prezime",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Username",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Kandidat.GetAll.KandidatGetAllResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kandidat"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KandidatOglas.Delete.KandidatOglasDeleteEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kandidat-oglas-delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.ViewModels.NoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kandidat-Oglas"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KandidatOglas.Dodaj.KandidatOglasDodajEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kandidat-oglas-dodaj",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.KandidatOglas.Dodaj.KandidatOglasDodajRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.KandidatOglas.Dodaj.KandidatOglasDodajResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kandidat-Oglas"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KandidatOglas.GetAll.KandidatOglasGetAllEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kandidat-oglas-get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "KandidatId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "KompanijaId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PretragaNaziv",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Spasen",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Otvoren",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.KandidatOglas.GetAll.KandidatOglasGetAllResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kandidat-Oglas"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KandidatOglas.Update.KandidatOglasUpdateEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kandidat-oglas-update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.KandidatOglas.Update.KandidatOglasUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.KandidatOglas.Update.KandidatOglasUpdateResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kandidat-Oglas"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KandidatSpaseneKomapnije.Dodaj.KandidatSpaseneKompanijeDodajEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kandidat-spasene-kompanije-dodaj",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.KandidatSpaseneKomapnije.Dodaj.KandidatSpaseneKompanijeDodajRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.KandidatSpaseneKomapnije.Dodaj.KandidatSpaseneKompanijeDodajResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kandidat-Spasene-Kompanije"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KandidatSpaseneKomapnije.Update.KandidatSpaseneKompanijeUpdateEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kandidat-spasene-kompanije-update",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.KandidatSpaseneKomapnije.Update.KandidatSpaseneKompanijeUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.KandidatSpaseneKomapnije.Update.KandidatSpaseneKompanijeUpdateResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kandidat-Spasene-Kompanije"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KandidatSpaseniOglasi.Dodaj.KandidatSpaseniOglasiDodajEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kandidat-spaseni-oglas-dodaj",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.KandidatSpaseniOglasi.Dodaj.KandidatSpaseniOglasiDodajRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.KandidatSpaseniOglasi.Dodaj.KandidatSpaseniOglasiDodajResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kandidat-Spaseni-Oglas"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KandidatSpaseniOglasi.Update.KandidatSpaseniOglasiUpdateEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kandidat-spaseni-oglas-update",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.KandidatSpaseniOglasi.Update.KandidatSpaseniOglasiUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.KandidatSpaseniOglasi.Update.KandidatSpaseniOglasiUpdateResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kandidat-Spaseni-Oglas"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Kandidat.Update.KandidatUpdateEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kandidat-update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Kandidat.Update.KandidatUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Kandidat.Update.KandidatUpdateResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kandidat"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Kandidat.GetById.KandidatGetByIdEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kandidat/get-by-id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Kandidat.GetById.KandidatGetByIdResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kandidat"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Kompanija.Delete.KompanijaDeleteEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kompanija-delete",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.ViewModels.NoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kompanija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Kompanija.Dodaj.KompanijaDodajEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kompanija-dodaj",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Kompanija.Dodaj.KompanijaDodajRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Kompanija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Kompanija.GetAll.KompanijaGetAllEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kompanija-get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Naziv",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Lokacija",
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BrojZaposlenih",
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImaOtvorenePozicije",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Spasen",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "KandidatId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortParametri",
+        "Type": "System.Collections.Generic.List\u00601[[JobSearchingWebApp.ViewModels.SortParametar, JobSearchingWebApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Kompanija.GetAll.KompanijaGetAllResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kompanija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KompanijaKandidat.Delete.KompanijaKandidatDeleteEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kompanija-kandidat-delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "kompanija_kandidat_id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.ViewModels.NoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kompanija-Kandidat"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KompanijaKandidat.Dodaj.KompanijaKandidatDodajEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kompanija-kandidat-dodaj",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.KompanijaKandidat.Dodaj.KompanijaKandidatDodajRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.KompanijaKandidat.Dodaj.KompanijaKandidatDodajResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kompanija-Kandidat"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KompanijaKandidat.GetAll.KompanijaKandidatGetAllEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kompanija-kandidat-get-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "kompanija_id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "kandidat_id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "datum_razgovora",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.KompanijaKandidat.GetAll.KompanijaKandidatGetAllResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kompanija-Kandidat"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Kompanija.Update.KompanijaUpdateEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kompanija-update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Kompanija.Update.KompanijaUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Kompanija.Update.KompanijaUpdateResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kompanija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Kompanija.GetById.KompanijaGetByIdEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "kompanija/get-by-id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Kompanija.GetById.KompanijaGetByIdResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Kompanija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Korisnik.GetAll.KorisniGetAllEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "korisnici-get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Korisnik.GetAll.KorisnikGetAllRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Korisnik.GetAll.KorisnikGetAllResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Korisnik"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KorisnikNotifikacija.Delete.KorisnikNotifikacijaDeleteEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "korisnik-notifikacija-delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "korisnik_notifikacija_id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.ViewModels.NoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Korisnik-Notifikacija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KorisnikNotifikacija.Dodaj.KorisnikNotifikacijaDodajEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "korisnik-notifikacija-dodaj",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.KorisnikNotifikacija.Dodaj.KorisnikNotifikacijaDodajRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.KorisnikNotifikacija.Dodaj.KorisnikNotifikacijaDodajResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Korisnik-Notifikacija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KorisnikNotifikacija.GetAll.KorisnikNotifikacijaGetAllEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "korisnik-notifikacija-get-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "korisnik_id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "notifikacija_id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "datum_primanja",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "pogledano",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.KorisnikNotifikacija.GetAll.KorisnikNotifikacijaGetAllResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Korisnik-Notifikacija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.KorisnikNotifikacija.Update.KorisnikNotifikacijaUpdateEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "korisnik-notifikacija-update",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.KorisnikNotifikacija.Update.KorisnikNotifikacijaUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.KorisnikNotifikacija.Update.KorisnikNotifikacijaUpdateResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Korisnik-Notifikacija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthController",
+    "Method": "Login",
+    "RelativePath": "login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "JobSearchingWebApp.Endpoints.Autentifikacija.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Lokacija.GetAll.LokacijaGetAllEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "lokacija-get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Lokacija.GetAll.LokacijaGetAllRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Lokacija.GetAll.LokacijaGetAllResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Lokacija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthController",
+    "Method": "ManageTwoFactorAuthentication",
+    "RelativePath": "manage-two-factor-authentication",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthController",
+    "Method": "ManageTwoFactorAuthentication",
+    "RelativePath": "manage-two-factor-authentication/{token}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Notifikacija.Delete.NotifikacijaDeleteEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "notifikacija-delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "notifikacija_id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.ViewModels.NoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Notifikacija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Notifikacija.Dodaj.NotifikacijaDodajEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "notifikacija-dodaj",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Notifikacija.Dodaj.NotifikacijaDodajRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Notifikacija.Dodaj.NotifikacijaDodajResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Notifikacija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Notifikacija.GetAll.NotifikacijaGetAllEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "notifikacija-pretraga",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "naziv",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "vrsta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Notifikacija.GetAll.NotifikacijaGetAllResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Notifikacija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Notifikacija.Update.NotifikacijaUpdateEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "notifikacija-update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Notifikacija.Update.NotifikacijaUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Notifikacija.Update.NotifikacijaUpdateResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Notifikacija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Oglas.Delete.OglasDeleteEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "oglas-delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oglas_id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Oglas"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Oglas.Dodaj.OglasDodajEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "oglas-dodaj",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Oglas.Dodaj.OglasDodajRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Oglas.Dodaj.OglasDodajResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Oglas"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Oglas.GetAll.OglasGetAllEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "oglas-get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Naziv",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Lokacija",
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "TipPosla",
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Iskustvo",
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MinimumGodinaIskustva",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Spasen",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "KandidatId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "KompanijaId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Otvoren",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Objavljen",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortParametri",
+        "Type": "System.Collections.Generic.List\u00601[[JobSearchingWebApp.ViewModels.SortParametar, JobSearchingWebApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Oglas.GetAll.OglasGetAllResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Oglas"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Oglas.Dodaj.GetObjavljen.OglasGetObjavljenEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "oglas-get-by-objavljen/{objavljen}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objavljen",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Oglas.Dodaj.GetObjavljen.OglasGetObjavljenResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Oglas"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Oglas.SoftDelete.OglasSoftDeleteEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "oglas-soft-delete",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Oglas.SoftDelete.OglasSoftDeleteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Oglas.SoftDelete.OglasSoftDeleteResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Oglas"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Oglas.Update.OglasUpdateEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "oglas-update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Oglas.Update.OglasUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Oglas.Update.OglasUpdateResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Oglas"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Oglas.GetById.OglasGetByIdEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "oglas/get-by-id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Oglas.GetById.OglasGetByIdResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Oglas"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthController",
+    "Method": "RefereshToken",
+    "RelativePath": "refresh-token",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthController",
+    "Method": "RegisterAdmin",
+    "RelativePath": "register/admin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Autentifikacija.RegistracijaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthController",
+    "Method": "RegisterKandidat",
+    "RelativePath": "register/kandidat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Kandidat.Dodaj.KandidatDodajRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthController",
+    "Method": "RegisterKompanija",
+    "RelativePath": "register/kompanija",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Kompanija.Dodaj.KompanijaDodajRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthController",
+    "Method": "ResendEMailConfirmationLink",
+    "RelativePath": "resend-email-confirmation-link/{email}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthController",
+    "Method": "SendPhoneVerificationCode",
+    "RelativePath": "send-phone-verification-code/{kandidatId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "kandidatId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.StatusPrijave.Get.GetStatusPrijaveEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "status-prijave-get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "noRequest",
+        "Type": "JobSearchingWebApp.ViewModels.NoRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.StatusPrijave.Get.GetStatusPrijaveResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "StatusPrijave"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Tehni\u010DkeVje\u0161tine.Get.GetTehni\u010DkeVje\u0161tineEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "tehnicke-vjestine-get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "noRequest",
+        "Type": "JobSearchingWebApp.ViewModels.NoRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Tehni\u010DkeVje\u0161tine.Get.GetTehni\u010DkeVje\u0161tineResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "TehnickeVjestine"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthController",
+    "Method": "VerifyPhoneNumber",
+    "RelativePath": "verify-phone-number/{token}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthController",
+    "Method": "VerifyTwoFactor",
+    "RelativePath": "verify-two-factor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "JobSearchingWebApp.ViewModels.VerifyTwoFactorToken",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Autentifikacija.AuthResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Vjestina.Get.GetVje\u0161tineEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "vjestine-get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "noRequest",
+        "Type": "JobSearchingWebApp.ViewModels.NoRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Vjestina.Get.GetVje\u0161tineResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Vjestine"
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+MailJet__ApiKey=c367452f04590b3260d1c7b1edb251d1
+MailJet__SecretKey=9b32e93a363677966b1eca2d1dfca9f4
+JwtSettings__Key=G6ZjGyuKnKabrdrPf27oj7RQHWl2kxl6G6ZjGyuKnKabrdrPf27oj7RQHWl2kxl6
+JwtSettings__Issuer=http://localhost:5192
+JwtSettings__Audience=https://localhost:4200
+JwtSettings__ExpiresInDays=1
