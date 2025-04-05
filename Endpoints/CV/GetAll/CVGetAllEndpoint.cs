@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace JobSearchingWebApp.Endpoints.CV.GetAll
 {
-    [Authorize]
     [Tags("CV")]
     [Route("cv-get")]
     public class CVGetAllEndpoint : MyBaseEndpoint<CVGetAllRequest, CVGetAllResponse>
@@ -54,7 +53,8 @@ namespace JobSearchingWebApp.Endpoints.CV.GetAll
                 Grad = cv.Grad,
                 Drzava = cv.Drzava,
                 ProfesionalniSazetak = cv.ProfesionalniSazetak,
-                DatumModificiranja = cv.DatumModificiranja
+                DatumModificiranja = cv.DatumModificiranja,
+                KorisnikId = cv.KandidatId
             }).ToList();
 
             return new CVGetAllResponse { CV = lista };

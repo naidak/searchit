@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Poruka.GetAllChats.PorukaGetAllChatsEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "all-chats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "primatelj_id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Poruka.GetAllChats.PorukaGetAllChatsResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "JobSearchingWebApp.Endpoints.Kompanija.GetBrojZaposlenihRange.GetBrojZaposlenihEndpoint",
     "Method": "MyAction",
     "RelativePath": "broj-zaposlenih",
@@ -26,6 +52,37 @@
     ],
     "Tags": [
       "Kompanija"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Poruka.GetChat.PorukaGetChatEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "chat",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "korisnik1_id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "korisnik2_id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Poruka.GetChat.PorukaGetChatResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
     ]
   },
   {
@@ -237,6 +294,35 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Korisnik.GetByUsername.KorisnikGetByUsernameEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "get-by-username",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Korisnik.GetByUsername.KorisnikGetByUsernameResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Korisnik"
+    ]
   },
   {
     "ContainingType": "JobSearchingWebApp.Endpoints.Iskustvo.GetAll.IskustvoGetAllEndpoint",
@@ -961,6 +1047,35 @@
     ]
   },
   {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Korisnik.GetAllData.KorisnikGetAllDataEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "korisnici-get-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Korisnik.GetAllData.KorisnikGetAllDataRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Korisnik.GetAllData.KorisnikGetAllDataResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Korisnik"
+    ]
+  },
+  {
     "ContainingType": "JobSearchingWebApp.Endpoints.KorisnikNotifikacija.Delete.KorisnikNotifikacijaDeleteEndpoint",
     "Method": "MyAction",
     "RelativePath": "korisnik-notifikacija-delete",
@@ -1171,6 +1286,32 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Poruka.MarkAsRead.PorukaMarkAsReadEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "mark-as-read",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Poruka.MarkAsRead.PorukaMarkAsReadRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Poruka.MarkAsRead.PorukaMarkAsReadResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "JobSearchingWebApp.Endpoints.Notifikacija.Delete.NotifikacijaDeleteEndpoint",
@@ -1534,6 +1675,64 @@
     ],
     "Tags": [
       "Oglas"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Poruka.GetByKorisnikId.PorukaGetEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "poruka-get/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Poruka.GetByKorisnikId.PorukaGetResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Poruka"
+    ]
+  },
+  {
+    "ContainingType": "JobSearchingWebApp.Endpoints.Poruka.Send.PorukaSendEndpoint",
+    "Method": "MyAction",
+    "RelativePath": "poruka-send",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobSearchingWebApp.Endpoints.Poruka.Send.PorukaSendRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobSearchingWebApp.Endpoints.Poruka.Send.PorukaSendResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Poruka"
     ]
   },
   {

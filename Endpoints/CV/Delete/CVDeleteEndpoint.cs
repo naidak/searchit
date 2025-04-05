@@ -13,7 +13,7 @@ using JobSearchingWebApp.ViewModels;
 
 namespace JobSearchingWebApp.Endpoints.CV.Delete
 {
-    [Authorize(Roles = "Admin, Kandidat")]
+    [Authorize(Roles = "Admin, Kompanija")]
     [Tags("CV")]
     [Route("cv-delete")]
     public class CVDeleteEndpoint : MyBaseEndpoint<int, ActionResult<NoResponse>>

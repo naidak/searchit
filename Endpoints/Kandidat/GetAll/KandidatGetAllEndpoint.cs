@@ -9,7 +9,7 @@ using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 namespace JobSearchingWebApp.Endpoints.Kandidat.GetAll
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     [Tags("Kandidat")]
     [Route("kandidat-get")]
     public class KandidatGetAllEndpoint : MyBaseEndpoint<KandidatGetAllRequest, ActionResult<KandidatGetAllResponse>>

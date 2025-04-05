@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace JobSearchingWebApp.Endpoints.Oglas.Update
 {
-    [Authorize(Roles = "Admin, Kandidat")]
+    [Authorize(Roles = "Admin, Kompanija")]
     [Tags("Oglas")]
     [Route("oglas-update")]
     public class OglasUpdateEndpoint : MyBaseEndpoint<OglasUpdateRequest, ActionResult<OglasUpdateResponse>>
@@ -31,94 +31,85 @@ namespace JobSearchingWebApp.Endpoints.Oglas.Update
             var userId = userManager.GetUserId(User);
             var user = await userManager.GetUserAsync(User);
 
-            if (user == null || user.IsObrisan == true)
+            if (user == null || user.IsObrisan)
             {
-                return NotFound($"Unable to load user with ID '{userManager.GetUserId(User)}'.");
+                return NotFound($"Unable to load user with ID '{userId}'.");
             }
 
-            var oglas = dbContext.Oglasi
-                .Include(o => o.OpisOglas)  // Explicitly include OpisOglas
+            var oglas = await dbContext.Oglasi
+                .Include(o => o.OpisOglas)
                 .Include(o => o.OglasLokacija)
                 .Include(o => o.OglasIskustvo)
-                .FirstOrDefault(x => x.Id == request.oglas_id);
+                .FirstOrDefaultAsync(x => x.Id == request.oglas_id);
 
             if (oglas == null)
             {
-                throw new Exception("Nije pronađen oglas sa ID " + request.oglas_id);
+                return NotFound($"Nije pronađen oglas sa ID {request.oglas_id}.");
             }
 
             // Update the fields of the Oglas entity
             oglas.NazivPozicije = request?.naziv_pozicije;
             oglas.RokPrijave = request.rok_prijave ?? oglas.RokPrijave;
             oglas.DatumModificiranja = DateTime.Now;
+            oglas.Objavljen = request.objavljen;
 
             // Update the existing OpisOglas entity
             if (oglas.OpisOglas != null)
             {
                 oglas.OpisOglas.OpisPozicije = request.opis_oglasa.opis_pozicije ?? oglas.OpisOglas.OpisPozicije;
-                oglas.OpisOglas.Benefiti = request?.opis_oglasa.benefiti ?? oglas.OpisOglas.Benefiti;
-                oglas.OpisOglas.Kvalifikacija = request?.opis_oglasa.kvalifikacije ?? oglas.OpisOglas.Kvalifikacija;
-                oglas.OpisOglas.Vjestine = request?.opis_oglasa.vjestine ?? oglas.OpisOglas.Vjestine;
+                oglas.OpisOglas.Benefiti = request.opis_oglasa.benefiti ?? oglas.OpisOglas.Benefiti;
+                oglas.OpisOglas.Kvalifikacija = request.opis_oglasa.kvalifikacije ?? oglas.OpisOglas.Kvalifikacija;
+                oglas.OpisOglas.Vjestine = request.opis_oglasa.vjestine ?? oglas.OpisOglas.Vjestine;
                 oglas.OpisOglas.PrefiraneGodineIskstva = request.opis_oglasa.preferirane_godine_iskustva ?? oglas.OpisOglas.PrefiraneGodineIskstva;
                 oglas.OpisOglas.MinimumGodinaIskustva = request.opis_oglasa.minimum_godina_iskustva ?? oglas.OpisOglas.MinimumGodinaIskustva;
             }
 
+            // Clear existing locations and add updated ones
+            oglas.OglasLokacija.Clear();
             foreach (var lokacijaRequest in request.lokacija)
             {
-                // Check if the Lokacija already exists
                 var existingLokacija = await dbContext.Lokacija
-                    .FirstOrDefaultAsync(l => l.Id == lokacijaRequest.id);
+                    .FirstOrDefaultAsync(l => l.Id == lokacijaRequest.id) ??
+                    new Database.Lokacija { Id = lokacijaRequest.id, Naziv = lokacijaRequest.naziv };
 
-                if (existingLokacija == null)
+                if (existingLokacija.Id == 0)
                 {
-                    // Handle the case where Lokacija does not exist
-                    existingLokacija = new Database.Lokacija
-                    {
-                        Id = lokacijaRequest.id,
-                        Naziv = lokacijaRequest.naziv
-                    };
                     dbContext.Lokacija.Add(existingLokacija);
                     await dbContext.SaveChangesAsync(); // Save the new Lokacija to get the ID
                 }
 
-                var newOglasLokacija = new OglasLokacija
+                oglas.OglasLokacija.Add(new OglasLokacija
                 {
                     OglasId = oglas.Id,
-                    LokacijaId = existingLokacija.Id // Use the existing or newly created Lokacija's ID
-                };
-
-                oglas.OglasLokacija.Add(newOglasLokacija);
+                    LokacijaId = existingLokacija.Id
+                });
             }
 
+            // Clear existing experiences and add updated ones
             oglas.OglasIskustvo.Clear();
-            foreach(var iskustvoRequest in request.iskustvo)
+            foreach (var iskustvoRequest in request.iskustvo)
             {
-                var existingIskustvo = dbContext.Iskustvo
-                    .FirstOrDefault(i => i.Id == iskustvoRequest.id);
+                var existingIskustvo = await dbContext.Iskustvo
+                    .FirstOrDefaultAsync(i => i.Id == iskustvoRequest.id) ??
+                    new Database.Iskustvo { Id = iskustvoRequest.id, Naziv = iskustvoRequest.naziv };
 
-                if(existingIskustvo == null)
+                if (existingIskustvo.Id == 0)
                 {
-                    existingIskustvo = new Database.Iskustvo
-                    {
-                        Id = iskustvoRequest.id,
-                        Naziv = iskustvoRequest.naziv
-                    };
                     dbContext.Iskustvo.Add(existingIskustvo);
-                    await dbContext.SaveChangesAsync();
+                    await dbContext.SaveChangesAsync(); // Save the new Iskustvo to get the ID
                 }
-                var newOglasIskustvo = new OglasIskustvo
-                {
-                    IskustvoId = iskustvoRequest.id,
-                    OglasId = existingIskustvo.Id,
-                };
 
-                oglas.OglasIskustvo.Add(newOglasIskustvo);
+                oglas.OglasIskustvo.Add(new OglasIskustvo
+                {
+                    IskustvoId = existingIskustvo.Id,
+                    OglasId = oglas.Id,
+                });
             }
 
+            // Save all changes in a single transaction
             await dbContext.SaveChangesAsync();
 
             return new OglasUpdateResponse { Id = oglas.Id };
         }
-
     }
 }

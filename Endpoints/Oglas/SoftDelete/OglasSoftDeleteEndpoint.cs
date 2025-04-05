@@ -44,7 +44,6 @@ namespace JobSearchingWebApp.Endpoints.Oglas.SoftDelete
                 };
             }
 
-            // Mark the record as deleted
             oglas.IsObrisan = true;
             dbContext.Oglasi.Update(oglas);
             await dbContext.SaveChangesAsync(cancellationToken);

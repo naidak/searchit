@@ -17,5 +17,12 @@ namespace JobSearchingWebApp.Database
         public virtual Uloga Uloga { get; set; }
 
         public bool IsObrisan { get; set; } = false;
+
+        public override string? UserName { get => base.UserName; set => base.UserName = value; }
+
+        public override string ToString()
+        {
+            return UserName;
+        }
     }
 }

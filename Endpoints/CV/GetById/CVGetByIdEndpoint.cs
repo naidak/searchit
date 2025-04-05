@@ -7,7 +7,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JobSearchingWebApp.Endpoints.CV.GetById
 {
-    [Authorize]
+    //[Authorize]
+    [AllowAnonymous]
     [Tags("CV")]
     [Route("cv/get-by-id")]
     public class CVGetByIdEndpoint : MyBaseEndpoint<int, CVGetByIdResponse>

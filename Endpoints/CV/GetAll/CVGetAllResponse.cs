@@ -16,6 +16,7 @@ namespace JobSearchingWebApp.Endpoints.CV.GetAll
         public bool Objavljen { get; set; }
 
         public string Naziv { get; set; }
+        public string KorisnikId { get; set; }
 
         public string Ime { get; set; }
 

@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace JobSearchingWebApp.Endpoints.Kandidat.Update
 {
-    [Authorize(Roles = "Kandidat")]
+   // [Authorize(Roles = "Kandidat")]
     [Tags("Kandidat")]
     [Route("kandidat-update")]
     public class KandidatUpdateEndpoint : MyBaseEndpoint<KandidatUpdateRequest, ActionResult<KandidatUpdateResponse>>
@@ -28,16 +28,6 @@ namespace JobSearchingWebApp.Endpoints.Kandidat.Update
         [HttpPut]
         public override async Task<ActionResult<KandidatUpdateResponse>> MyAction(KandidatUpdateRequest request, CancellationToken cancellationToken)
         {
-            var userId = userManager.GetUserId(User);
-            var user = await userManager.GetUserAsync(User);
-
-            if (user == null || user.IsObrisan == true)
-            {
-                return NotFound($"Unable to load user with ID '{userManager.GetUserId(User)}'.");
-            }
-
-            if (request.Id == userId)
-            {
                 var kandidat = await dbContext.Kandidati.FindAsync(request.Id);
 
                 if (kandidat == null)
@@ -47,6 +37,9 @@ namespace JobSearchingWebApp.Endpoints.Kandidat.Update
 
                 kandidat.MjestoPrebivalista = request.MjestoPrebivalista ?? kandidat.MjestoPrebivalista;
                 kandidat.Zvanje = request.Zvanje ?? kandidat.Zvanje;
+                kandidat.Ime = request.Ime ?? kandidat.Ime;
+                kandidat.Prezime = request.Prezime ?? kandidat.Prezime;
+                kandidat.UserName = request.Username ?? kandidat.UserName;
 
                 if (!String.IsNullOrEmpty(request.PhoneNumber))
                 {
@@ -57,9 +50,7 @@ namespace JobSearchingWebApp.Endpoints.Kandidat.Update
                 await dbContext.SaveChangesAsync();
 
                 return new KandidatUpdateResponse { id = kandidat.Id };
-            }
-
-            return Unauthorized();
+        
            
         }
     }

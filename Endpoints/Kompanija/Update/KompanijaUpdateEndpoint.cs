@@ -13,7 +13,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JobSearchingWebApp.Endpoints.Kompanija.Update
 {
-    [Authorize(Roles ="Kompanija")]
+    //[Authorize(Roles ="Kompanija, Admin")]
     [Tags("Kompanija")]
     [Route("kompanija-update")]
     public class KompanijaUpdateEndpoint : MyBaseEndpoint<KompanijaUpdateRequest, ActionResult<KompanijaUpdateResponse>>
@@ -30,13 +30,13 @@ namespace JobSearchingWebApp.Endpoints.Kompanija.Update
         [HttpPut]
         public override async Task<ActionResult<KompanijaUpdateResponse>> MyAction(KompanijaUpdateRequest request, CancellationToken cancellationToken)
         {
-            var userId = userManager.GetUserId(User);
-            var user = await userManager.GetUserAsync(User);
+            //var userId = userManager.GetUserId(User);
+            //var user = await userManager.GetUserAsync(User);
 
-            if (user == null || user.IsObrisan == true)
-            {
-                return NotFound(new { message = $"Unable to load user with ID {userManager.GetUserId(User)}." });
-            }
+            //if (user == null || user.IsObrisan == true)
+            //{
+            //    return NotFound(new { message = $"Unable to load user with ID {userManager.GetUserId(User)}." });
+            //}
 
             var kompanija = await dbContext.Kompanije.FindAsync(request.Id);
 
@@ -45,8 +45,8 @@ namespace JobSearchingWebApp.Endpoints.Kompanija.Update
                 return NotFound(new { message = $"Unable to load user with ID {request.Id}." });
             }
 
-            if (request.Id == userId)
-            {
+            //if (request.Id == userId)
+            //{
                 kompanija.LinkedIn = request.LinkedIn ?? kompanija.LinkedIn;
                 kompanija.BrojZaposlenih = request.BrojZaposlenih ?? kompanija.BrojZaposlenih;
                 kompanija.Naziv = request.Naziv ?? kompanija.Naziv;
@@ -98,9 +98,9 @@ namespace JobSearchingWebApp.Endpoints.Kompanija.Update
                 await dbContext.SaveChangesAsync();
 
                 return new KompanijaUpdateResponse { Id = request.Id };
-            }
+            //}
            
-            else return Unauthorized();
+            //else return Unauthorized();
         }
     }
 }

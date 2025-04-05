@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JobSearchingWebApp.Endpoints.Korisnik.GetAll
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     [Tags("Korisnik")]
     [Route("korisnici-get")]
     public class KorisniGetAllEndpoint : MyBaseEndpoint<KorisnikGetAllRequest, ActionResult<KorisnikGetAllResponse>>
